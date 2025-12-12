@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Scrollbar & other styles unchanged */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  font-family: "Goodly", sans-serif;
+}
+
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
+/* ============================= */
+/*        GOODLY FONTS           */
+/* ============================= */
+@font-face {
+  font-family: "Goodly";
+  src: url("./assets/fonts/goodly-font/goodly-extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Goodly";
+  src: url("./assets/fonts/goodly-font/goodly-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Goodly";
+  src: url("./assets/fonts/goodly-font/goodly-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Goodly";
+  src: url("./assets/fonts/goodly-font/goodly-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Goodly";
+  src: url("./assets/fonts/goodly-font/goodly-semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Goodly";
+  src: url("./assets/fonts/goodly-font/goodly-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@theme {
+  --font-goodly: "Goodly", sans-serif;
+}
