@@ -19,16 +19,16 @@ const LeadingSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start">
           {/* LEFT HEADING */}
           <div className="flex-1">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#2D461D]">
+            <h1 className="text-4xl md:text-7xl leading-tight text-[#2D461D]">
               <span className="text-[#A9FF67]">You will </span>have Quick <br />
               <span className="text-black">Access </span>
-            <span className="text-[#A9FF67]">To</span>
+              <span className="text-[#A9FF67]">To</span>
             </h1>
           </div>
 
           {/* RIGHT SMALL TEXT */}
           <div className="flex-1 mt-6 md:mt-4 md:pl-20">
-            <p className="text-base md:text-lg text-[#011E0A] leading-relaxed">
+            <p className="text-base md:text-lg text-[#011E0A] leading-relaxed font-manrope">
               The Smarter Way to Grow Your Wealth <br />
               Through Ethical Farming
             </p>

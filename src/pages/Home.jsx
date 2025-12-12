@@ -10,7 +10,7 @@ const Home = () => {
             <div className="relative z-10 flex flex-col items-center w-full max-w-[1400px] px-4 pt-10">
 
                 {/* ===================== TOP BADGES ===================== */}
-                <div className="flex w-full justify-between items-start mt-4 max-w-[1100px] px-4 md:px-10 z-30 md:mt-10
+                <div className="flex w-full justify-between items-start max-w-[1100px] px-4 md:px-10 z-30 mt-10
                 max-md:flex-col max-md:items-center max-md:gap-3">
 
                     {/* Left Badge */}
@@ -110,7 +110,7 @@ const Home = () => {
                 </div>
 
                 {/* ===================== CTA BUTTONS ===================== */}
-                <div className="flex items-center gap-3 mt-20 pb-20 z-30
+                <div className="flex items-center gap-3 mt-12 pb-20 z-30
                 max-sm:flex-col max-sm:gap-6">
 
                     {/* Invest Button */}
@@ -130,7 +130,7 @@ const Home = () => {
 
                     {/* Play Button */}
 
-                    <div className="relative w-[90px] h-[90px]  flex items-center">
+                    <div className="relative w-[90px] h-[90px] flex items-center">
 
                         {/* LEFT HALF CIRCLE ARC */}
                         <svg

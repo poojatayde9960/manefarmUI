@@ -1,8 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import { FaPlay } from "react-icons/fa";
-import { RiPlayReverseLargeFill } from "react-icons/ri";
+import { IoCaretForwardOutline } from "react-icons/io5";
+import { IoCaretBack } from "react-icons/io5";
 
 const testimonials = [
   {
@@ -42,8 +42,8 @@ const TestimonialCard = ({ testimonial }) => (
       <RiDoubleQuotesL size={35} />
     </div>
 
-    <div className="flex flex-col items-center mt-10">
-      <h3 className="font-semibold text-lg mb-2">{testimonial.name}</h3>
+    <div className="flex flex-col items-center mt-10 font-manrope">
+      <h3 className="font-semibold text-lg mb-2 text-[#A9FF67]">{testimonial.name}</h3>
       <p className="text-sm mb-4 text-center">{testimonial.message}</p>
 
       <div className="flex mt-4">
@@ -57,18 +57,18 @@ const TestimonialCard = ({ testimonial }) => (
 
 const Testimonials = () => {
   return (
-    <section className="py-16 px-4  md:px-16">
+    <section className="py-16 px-4 md:px-16 bg-[#E8FFD694]">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-6xl font-semibold text-[#A9FF67] leading-snug">
-          Real experiences{" "}
+        <h2 className="text-3xl md:text-7xl  text-[#2D461D] leading-snug">
+          <span className="text-[#A9FF67]">Real experiences</span>{" "}
           <span className="text-[#2D461D]">
             from people
-            <br className="md:hidden" />
+            <br />
           </span>{" "}
-          who trust <span className="text-[#2D461D]">Mane Farms</span>
+          who trust <span className="text-[#A9FF67] ">Mane Farms</span>
         </h2>
 
-        <p className="text-sm md:text-base text-gray-700 mt-2 leading-relaxed">
+        <p className="text-sm md:text-xl text-[#2D461D] mt-2 leading-relaxed font-manrope">
           Experiences That Reflect Our Commitment to
           <br className="hidden md:block" /> Quality, Care & Investor Satisfaction
         </p>
@@ -107,15 +107,15 @@ const Testimonials = () => {
           "
         >
           <button
-            className="bg-white border border-[#2D461D] p-4 md:p-5 rounded-full shadow hover:bg-green-50"
+            className="bg-white border border-[#2D461D] p-4 md:p-4 rounded-full shadow hover:bg-green-50"
           >
-            <FaPlay className="text-[#2D461D]" size={25} />
+            <IoCaretBack className="text-[#2D461D]" size={45} />
           </button>
 
           <button
-            className="bg-[#A9FF67] p-4 md:p-5 rounded-full shadow hover:bg-green-500"
+            className="bg-[#A9FF67] p-4 md:p-4 rounded-full shadow hover:bg-green-500"
           >
-            <RiPlayReverseLargeFill className="text-[#2D461D]" size={30} />
+            <IoCaretForwardOutline className="text-[#2D461D]" size={45} />
           </button>
         </div>
       </div>
