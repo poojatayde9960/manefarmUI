@@ -1,8 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import { IoCaretForwardOutline } from "react-icons/io5";
-import { IoCaretBack } from "react-icons/io5";
+import { IoCaretForwardOutline, IoCaretBack } from "react-icons/io5";
 
 const testimonials = [
   {
@@ -23,32 +22,36 @@ const TestimonialCard = ({ testimonial }) => (
   <div
     className="
       bg-[#2D461D] text-white rounded-xl 
-      h-auto md:h-72 p-6 shadow-md 
+      p-6 shadow-md 
       flex flex-col items-center 
-      max-w-sm w-full md:w-auto 
-      relative
+      w-full sm:w-[320px] md:w-[350px]
+      relative flex-shrink-0
     "
   >
     {/* Quote icon */}
     <div
       className="
         bg-[#A9FF67] text-[#2D461D] rounded-full 
-        w-16 h-16 flex items-center justify-center text-2xl mb-4 
-        absolute 
-        md:bottom-60 md:left-48 
-        left-1/2 -translate-x-1/2 md:-top-10 -top-2
+        w-14 h-14 md:w-16 md:h-16 
+        flex items-center justify-center 
+        absolute -top-6 md:-top-10
       "
     >
-      <RiDoubleQuotesL size={35} />
+      <RiDoubleQuotesL size={30} />
     </div>
 
     <div className="flex flex-col items-center mt-10 font-manrope">
-      <h3 className="font-semibold text-lg mb-2 text-[#A9FF67]">{testimonial.name}</h3>
-      <p className="text-sm mb-4 text-center">{testimonial.message}</p>
+      <h3 className="font-semibold text-base md:text-lg mb-2 text-[#A9FF67]">
+        {testimonial.name}
+      </h3>
 
-      <div className="flex mt-4">
+      <p className="text-xs sm:text-sm text-center leading-relaxed mb-4">
+        {testimonial.message}
+      </p>
+
+      <div className="flex mt-3">
         {Array.from({ length: testimonial.rating }).map((_, i) => (
-          <FaStar key={i} size={30} className="text-yellow-400 mr-2" />
+          <FaStar key={i} size={22} className="text-yellow-400 mr-1" />
         ))}
       </div>
     </div>
@@ -57,39 +60,47 @@ const TestimonialCard = ({ testimonial }) => (
 
 const Testimonials = () => {
   return (
-    <section className="py-16 px-4 md:px-16 bg-[#E8FFD694]">
+    <section className="py-16 px-4 md:px-16 bg-[#E8FFD694] overflow-hidden">
+      {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-7xl  text-[#2D461D] leading-snug">
-          <span className="text-[#A9FF67]">Real experiences</span>{" "}
-          <span className="text-[#2D461D]">
-            from people
-            <br />
-          </span>{" "}
-          who trust <span className="text-[#A9FF67] ">Mane Farms</span>
+        <h2 className="text-3xl sm:text-4xl md:text-7xl text-[#2D461D] leading-snug">
+          <span className="text-[#A9FF67]">Real experiences</span> from people{" "}
+          <br className="hidden md:block" />
+          who trust <span className="text-[#A9FF67]">Mane Farms</span>
         </h2>
 
-        <p className="text-sm md:text-xl text-[#2D461D] mt-2 leading-relaxed font-manrope">
+        <p className="text-sm sm:text-base md:text-xl text-[#2D461D] mt-4 font-manrope">
           Experiences That Reflect Our Commitment to
-          <br className="hidden md:block" /> Quality, Care & Investor Satisfaction
+          <br className="hidden md:block" /> Quality, Care & Investor
+          Satisfaction
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row md:justify-center items-center gap-6 relative">
-        {/* World map (desktop only) */}
-        <img
-          src="/world-map.png"
-          alt="World map"
-          className="hidden md:block absolute -left-15 -bottom-24 h-[550px] w-[450px] opacity-20"
-        />
+      {/* Content */}
+      <div className="relative flex flex-col items-center">
+        {/* World map (desktop only – unchanged) */}
 
-        {/* Testimonials */}
+        <div className="hidden md:block absolute -left-20 -bottom-24 z-0">
+          {/* Green shadow BEHIND map */}
+          <div className="absolute inset-0 bg-[#A9FF67] opacity-20 blur-3xl rounded-full scale-125 z-0"></div>
+
+          {/* Map image */}
+          <img
+            src="/world-map.png"
+            alt="World map"
+            className="relative h-[550px] w-[450px] opacity-20 z-10"
+          />
+        </div>
+
+        {/* Cards */}
         <div
           className="
-            flex flex-col md:flex-row 
-            gap-6 
-            overflow-x-auto md:overflow-visible 
-            w-full md:w-auto 
+            flex gap-6 
+            w-full 
+            overflow-x-auto md:overflow-visible
             px-2 md:px-0
+            justify-start md:justify-center
+            scrollbar-hide
           "
         >
           {testimonials.map((t, i) => (
@@ -97,25 +108,19 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Carousel Arrows */}
+        {/* Arrows */}
         <div
           className="
-            absolute 
-            md:right-20 md:top-1/2 md:-translate-y-1/2 
-            flex space-x-3 
-            bottom-[-70px] md:bottom-auto
+            flex gap-4 mt-8 md:mt-0
+            md:absolute md:right-20 md:top-1/2 md:-translate-y-1/2
           "
         >
-          <button
-            className="bg-white border border-[#2D461D] p-4 md:p-4 rounded-full shadow hover:bg-green-50"
-          >
-            <IoCaretBack className="text-[#2D461D]" size={45} />
+          <button className="bg-white border border-[#2D461D] p-3 md:p-4 rounded-full shadow hover:bg-green-50">
+            <IoCaretBack className="text-[#2D461D]" size={30} />
           </button>
 
-          <button
-            className="bg-[#A9FF67] p-4 md:p-4 rounded-full shadow hover:bg-green-500"
-          >
-            <IoCaretForwardOutline className="text-[#2D461D]" size={45} />
+          <button className="bg-[#A9FF67] p-3 md:p-4 rounded-full shadow hover:bg-green-500">
+            <IoCaretForwardOutline className="text-[#2D461D]" size={30} />
           </button>
         </div>
       </div>

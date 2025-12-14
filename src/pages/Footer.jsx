@@ -11,24 +11,23 @@ const Footer = () => {
         >
             {/* =================== TOP WHITE CARD =================== */}
             <div className="w-[95%] mx-auto bg-white rounded-3xl py-12 px-6 md:px-16 shadow-lg text-center relative">
-                <h2 className="text-3xl md:text-5xl font-goodly text-[#1E3A22]">
-                    Ready to <span className="text-[#A9FF67] font-goodly">start your</span> investment?
+                <h2 className="text-3xl md:text-7xl font-goodly font-semibold text-[#2D461D]">
+                    Ready <span className="text-[#A9FF67]  font-goodly">  to start your</span> investment ?
                 </h2>
 
-                <p className="text-[#1E3A22]/70 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-                    We bring modern, ethical, and transparent buffalo farming to investors. Our mission
+                <p className="text-[#2D461D]/70  md:text-xl mt-9  font-medium font-manrope mx-auto  ">
+                    We bring modern, ethical, and transparent buffalo farming to investors. <br /> Our mission
                     is to provide secure, profitable, and sustainable livestock investment opportunities
-                    with complete care and expert farm management.
+                    with <br /> complete care and expert farm management.
                 </p>
 
                 {/* Button */}
-                <div className="flex flex-col sm:flex-row md:ml-[40%] items-center justify-center sm:justify-start mt-8 gap-4 sm:gap-2 md:gap-4">
-                    <button className="px-8 sm:px-10 md:px-12 py-3 font-manrope rounded-full bg-[#2D461D] text-[#A9FF67] flex items-center justify-center shadow-md hover:bg-[#b8ff7f] transition-all duration-300">
+                <div className="flex flex-col sm:flex-row md:ml-[40%] items-center -mb-4 justify-center sm:justify-start mt-5 ">
+                    <button className="px-8 sm:px-10 md:px-16 py-3 font-manrope rounded-full bg-[#2D461D] text-[#A9FF67] flex items-center md:text-xl justify-center shadow-md  transition-all duration-300">
                         Invest Now
                     </button>
-                    <span className="w-10 h-10 sm:w-11 md:w-12 flex items-center justify-center border border-[#1E3A22] rounded-full">
-
-                        <Icon icon="solar:arrow-right-linear" className="text-[#2D461D] text-2xl sm:text-3xl md:text-2xl" />
+                    <span className="w-11 h-11 flex  items-center justify-center border-2 border-[#2D461D] rounded-full">
+                        <Icon icon="solar:arrow-right-linear" className="text-[#2D461D] text-2xl" style={{ transform: "rotate(-30deg)" }} />
                     </span>
                 </div>
 
@@ -44,7 +43,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-10 relative z-10">
                     {/* Left Quote - spans full on mobile, 5 columns on md+ */}
                     <div className="md:col-span-5">
-                        <p className="text-lg sm:text-2xl font-semibold mt-10 ml-8 text-[#FEFAE5] leading-relaxed max-w-lg">
+                        <p className="text-lg sm:text-3xl font-semibold mt-10 ml-8 text-[#FEFAE5] leading-relaxed max-w-xl">
                             “Invest in nature’s strength. Grow <br /> wealth with trust, transparency, and <br /> ethical farming.”
                         </p>
                     </div>
@@ -89,9 +88,9 @@ const Footer = () => {
                 <div className="w-full h-[1px] bg-[#A9FF67] mt-16"></div>
 
                 {/* Bottom Text */}
-                <div className="flex flex-col md:flex-row items-center md:justify-between text-sm text-white/70 mt-6 gap-3 ">
-                    <p>©2025 All Rights Reserved</p>
-                    <p className="flex items-center gap-2">
+                <div className="flex flex-col md:flex-row items-center md:-mb-10 md:justify-between text-sm text-[#A9FF67] mt-6 gap-3 ">
+                    <p className="text-[#A9FF67]">©2025 All Rights Reserved</p>
+                    <p className="flex items-center gap-2 font-manrope text-[#A9FF67]">
                         Developed By
                         <span className="flex items-center gap-1 text-[#A9FF67] font-semibold">
                             <img src="/tech-surya-logo.png" alt="logo" className="w-5 h-5" />

@@ -1,38 +1,61 @@
 import React from "react";
 import { Play, TrendingUp } from "lucide-react";
-
+import { Icon } from "@iconify/react";
 const Home = () => {
-    const buffaloes = "/buffaloes.png";
+    const buffaloess = "/buffaloess.png";
+    const round = "/round.png";
 
     return (
         <div className="w-full min-h-screen bg-white flex flex-col items-center relative overflow-hidden font-outfit">
 
-            <div className="relative z-10 flex flex-col items-center w-full max-w-[1400px] px-4 pt-10">
+            <div className="relative z-10 flex flex-col items-center w-full max-w-[1400px] px-4 pt-5">
 
                 {/* ===================== TOP BADGES ===================== */}
                 <div className="flex w-full justify-between items-start max-w-[1100px] px-4 md:px-10 z-30 mt-10
                 max-md:flex-col max-md:items-center max-md:gap-3">
 
                     {/* Left Badge */}
-                    <div className="pointer-events-auto flex items-center gap-3 bg-[#B8FF70] pl-2 pr-6 py-2 rounded-full shadow-md 
-                    -translate-y-4 max-md:-translate-y-0">
-                        <div className="w-10 h-10 rounded-full bg-[#1e3314] flex items-center justify-center">
-                            <TrendingUp className="text-[#B8FF70] w-5 h-5" />
+                    <div className="relative pointer-events-auto
+flex items-center gap-3
+bg-[#B8FF70] pl-12 pr-6 py-4
+rounded-full shadow-md
+-translate-y-4 max-md:-translate-y-0
+ml-6 max-md:ml-0">
+
+
+                        {/* Icon – OUTSIDE left */}
+                        <div className="absolute -left-14
+    w-12 h-12 rounded-full bg-[#1e3314]
+    flex items-center justify-center shadow-md">
+                            <Icon icon="famicons:analytics" className="text-[#A9FF67] text-3xl" />
                         </div>
-                        <span className="text-[#1A2C15] font-semibold text-sm md:text-base whitespace-nowrap">
+
+                        <span className="text-[#1A2C15] font-manrope  font-medium text-sm -ml-2">
                             Insured & Secured
                         </span>
+
                     </div>
 
                     {/* Right Badge */}
-                    <div className="pointer-events-auto flex items-center gap-3 bg-[#B8FF70] pl-6 pr-2 py-2 rounded-full shadow-md 
-                    -translate-y-4 max-md:-translate-y-0">
-                        <span className="text-[#1A2C15] font-semibold text-sm md:text-base whitespace-nowrap">
+                    <div className="relative pointer-events-auto
+flex items-center gap-3
+bg-[#B8FF70] pl-12 pr-6 py-4
+rounded-full shadow-md
+-translate-y-4 max-md:-translate-y-0
+ml-6 max-md:ml-0">
+
+
+                        {/* Icon – OUTSIDE left */}
+                        <div className="absolute -left-14
+    w-12 h-12 rounded-full bg-[#1e3314]
+    flex items-center justify-center shadow-md">
+                            <Icon icon="famicons:analytics" className="text-[#A9FF67] text-3xl" />
+                        </div>
+
+                        <span className="text-[#1A2C15] font-manrope font-medium  text-sm -ml-2">
                             Stable Monthly Returns
                         </span>
-                        <div className="w-10 h-10 rounded-full bg-[#1e3314] flex items-center justify-center">
-                            <TrendingUp className="text-[#B8FF70] w-5 h-5" />
-                        </div>
+
                     </div>
                 </div>
 
@@ -40,8 +63,8 @@ const Home = () => {
                 <div className="relative w-full flex flex-col items-center mt-[-60px]">
 
                     {/* Orbit Arc */}
-                    <div className="absolute mt-10 w-[930px] pointer-events-none z-0 
-                    max-md:w-[600px] max-sm:w-[420px]">
+                    <div className="absolute mt-8 w-[930px] pointer-events-none z-0 
+                    max-md:w-[600px] max-sm:w-[420px] ">
                         <svg viewBox="0 0 800 720" className="w-full h-full overflow-visible">
                             <defs>
                                 <linearGradient id="orbitGradient" x1="0%" y1="0%" x2="0%" y2="170%">
@@ -59,18 +82,20 @@ const Home = () => {
 
                             <circle cx="60" cy="270" r="6" fill="#A9FF67" />
                             <circle cx="190" cy="70" r="6" fill="#A9FF67" />
-                            <circle cx="400" cy="120" r="5" fill="#A9FF67" />
                             <circle cx="650" cy="105" r="5" fill="#A9FF67" />
                             <circle cx="740" cy="260" r="7" fill="#A9FF67" />
+                            <circle cx="300" cy="15" r="7" fill="#A9FF67" />
+                            <circle cx="520" cy="20" r="4" fill="#A9FF67" />
+
                         </svg>
                     </div>
 
                     {/* Rings & Buffalo */}
-                    <div className="relative flex justify-center items-center z-10 top-[150px]
+                    <div className="relative flex justify-center  items-center z-10 top-[100px]
                     max-md:top-[100px] max-sm:top-[70px]">
 
                         {/* Glow */}
-                        <div className="absolute w-[650px] h-[550px] rounded-full bg-[#B8FF70] opacity-20 blur-xl
+                        <div className="absolute w-[650px] h-[550px] rounded-full bg-[#A9FF67] opacity-20 blur-xl
                         max-md:w-[450px] max-md:h-[350px] max-sm:w-[320px] max-sm:h-[260px]"></div>
 
                         {/* Main Ring */}
@@ -79,32 +104,44 @@ const Home = () => {
                         max-sm:w-[250px] max-sm:h-[250px] max-sm:border-[25px]"></div>
 
                         {/* Center Glow */}
-                        <div className="absolute w-[130px] h-[130px] rounded-full bg-gradient-to-br from-white to-[#efffd6] shadow-[0_0_50px_rgba(184,255,112,0.8)]
-                        max-md:w-[90px] max-md:h-[90px]
-                        max-sm:w-[70px] max-sm:h-[70px]"></div>
+                        <div className="absolute w-[280px] h-[280px] rounded-full 
+     
+   
+    overflow-hidden
+    max-md:w-[90px] max-md:h-[90px]
+    max-sm:w-[70px] max-sm:h-[70px]"
+                        >
+                            <img
+                                src={round}   // <-- tuzi image
+                                alt="circle"
+                                className="w-full h-full object-cover rounded-full"
+                            />
+                        </div>
+
 
                         {/* Buffalo Image */}
                         <img
-                            src={buffaloes}
+                            src={buffaloess}
                             alt="Buffalo"
-                            className="relative z-20 h-60 w-[320px] mb-[70%] ml-16 object-contain drop-shadow-2xl
+                            className="relative z-20 h-70 w-[350px] mb-[70%] ml-14   object-contain drop-shadow-2xl
                             max-md:h-48 max-md:w-[260px] max-md:ml-8 max-sm:h-40 max-sm:w-[200px] max-sm:ml-4"
                         />
                     </div>
 
                     {/* Title & Text */}
-                    <div className="relative z-30 mt-[-140px] text-center space-y-4 max-w-5xl font-goodly
+                    <div className="relative z-30 mt-[-190px] text-center space-y-4 max-w-5xl font-goodly
                     max-md:mt-[-100px] max-sm:mt-[-70px]">
 
-                        <h1 className="text-5xl md:text-7xl text-[#0D1F13] leading-[1.1] font-goodly
+                        <h1 className="text-5xl md:text-6xl text-[#0D1F13] font-medium leading-[1.1] font-goodly
                         max-sm:text-3xl">
-                            Invest in High-Yield Buffaloes <br className="hidden md:block" />
-                            & Grow Your Dairy Income
+                            Invest in Buffalo Dairy Assets & <br className="hidden md:block" />
+                            Earn 11–13% Annual Returns.
                         </h1>
 
-                        <p className="text-[#1A2C15] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed pt-4 font-medium font-manrope
+                        <p className="text-[#1A2C15] text-lg md:text-xl max-w-3xl mx-auto leading-relaxed pt-4 font-manrope font-medium font-manrope
                         max-sm:text-base">
-                            Our farm-raised buffaloes offer stable, long-term returns through high milk production.
+                            Our farm-raised buffaloes offer stable, long-term returns through high <br /> milk production, verified health, and consistent daily output.
+                            {/* Our farm-raised buffaloes offer stable, long-term returns through <br /> high milk production. */}
                         </p>
                     </div>
                 </div>
@@ -116,7 +153,7 @@ const Home = () => {
                     {/* Invest Button */}
                     <button
                         className="
-                            text-white text-lg font-semibold px-14 py-4 rounded-full transition-all 
+                            text-[#A9FF67] text-lg  font-manrope px-14 py-4 rounded-full transition-all 
                             hover:scale-105 hover:shadow-xl
                             max-sm:px-10 max-sm:text-base
                         "
@@ -125,7 +162,7 @@ const Home = () => {
                             boxShadow: "0px 1px 12.8px 0px #A9FF67 inset"
                         }}
                     >
-                        Invest Now
+                        Book a Call
                     </button>
 
                     {/* Play Button */}

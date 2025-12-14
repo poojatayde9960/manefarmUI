@@ -54,42 +54,96 @@ const Contact = () => {
                         />
 
                         {/* BUTTON */}
-                        <button className="mt-4 sm:mt-6 bg-[#A9FF67] text-[#1E3A22] pl-6 sm:pl-10 pr-2 py-2 sm:py-3 rounded-full font-semibold flex items-center justify-between hover:bg-[#C4FF8A] transition shadow-lg w-full">
-                            Contact Us
-                            <span className="w-10 h-10 ml-3 sm:ml-6 rounded-full border border-[#1E3A22] flex items-center justify-center">
+                        <button className="mt-4 sm:mt-6  bg-[#A9FF67] text-[#1E3A22]
+ w-[40%] py-1 rounded-4xl 
+flex items-center justify-between
+hover:bg-[#C4FF8A] transition shadow-lg ">
+
+                            <span className="pl-16 font-manrope">Submit</span>
+
+                            <span className="w-10 h-10 mr-2 text-end rounded-full border border-[#1E3A22] 
+    flex items-center justify-center">
                                 <ArrowUpRight size={22} />
                             </span>
                         </button>
+
                     </div>
                 </div>
 
                 {/* RIGHT IMAGE + TAGS SECTION */}
-                <div className="w-full md:w-1/2 flex flex-col items-center md:items-end justify-center relative p-4 sm:p-6">
-                    <div className="w-[220px] sm:w-[280px] md:w-[420px]">
+                <div className="w-full md:w-1/2 flex flex-col items-center md:items-center justify-center relative p-4 sm:p-6">
+                    <div className="w-[220px] md:mr-20 sm:w-[280px] md:w-[420px]">
                         <img
                             src={buffaloes}
                             alt="buffalo"
-                            className="w-full object-contain drop-shadow-xl"
+                            className="w-full  object-contain drop-shadow-xl"
                         />
                     </div>
 
-                    <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6 md:mt-8 justify-center md:justify-end">
-                        {[
-                            "Stable Monthly Returns",
-                            "Stable",
-                            "Insured & Secured",
-                            "Tangible Assets",
-                            "Fully Managed Investment",
-                            "Complete Transparency"
-                        ].map((tag, idx) => (
-                            <span
-                                key={idx}
-                                className="px-3 sm:px-4 py-1.5 sm:py-2 whitespace-nowrap bg-[#FFFFFF1C]/60 text-white rounded-full border border-[#A9FF67]/40 text-xs sm:text-sm md:text-base"
-                            >
-                                {tag}
-                            </span>
-                        ))}
+                    <div className="mt-4 sm:mt-6  md:mt-8 grid grid-cols-3 gap-2 sm:gap-9 max-w-fit mx-auto md:mx-0">
+
+                        <span className="inline-flex items-center justify-center
+min-w-[191px]
+px-4 py-2 whitespace-nowrap  font-manrope
+bg-[#FFFFFF1C]/60 text-white rounded-full
+border border-[#A9FF67]/40
+text-xs sm:text-[15px]
+leading-none text-center">
+                            Stable Monthly Returns
+                        </span>
+                        <span className="inline-flex items-center justify-center
+min-w-[191px] ml-5
+px-4 py-3 whitespace-nowrap
+bg-[#FFFFFF1C]/60 text-white rounded-full  font-manrope
+border border-[#A9FF67]/40
+text-xs sm:text-[15px]
+leading-none text-center">
+                            Insured & Secured
+                        </span>
+
+
+                        {/* <span className="px- sm:px-4 py-1 whitespace-nowrap
+    bg-[#FFFFFF1C]/60 text-white rounded-full
+    border border-[#A9FF67]/40
+    text-xs sm:text-sm md:text-base
+    leading-none text-center">
+                            Insured & Secured
+                        </span> */}
+                        <span className="inline-flex items-center justify-center
+min-w-[151px] ml-9
+px-4 py-3 whitespace-nowrap
+bg-[#FFFFFF1C]/60 text-white rounded-full  font-manrope
+border border-[#A9FF67]/40
+text-xs sm:text-[15px]
+leading-none text-center">
+                            Tangible Assets
+                        </span>
+
+
+
+
+                        <span className="inline-flex items-center justify-center
+min-w-[209px] 
+px-4 py-3 whitespace-nowrap
+bg-[#FFFFFF1C]/60 text-white rounded-full  font-manrope
+border border-[#A9FF67]/40
+text-xs sm:text-[15px]
+leading-none text-center">
+                            Fully Managed Investment
+                        </span>
+
+                        <span className="inline-flex items-center justify-center
+min-w-[209px]  ml-9
+px-4 py-3 whitespace-nowrap
+bg-[#FFFFFF1C]/60 text-white rounded-full  font-manrope
+border border-[#A9FF67]/40
+text-xs sm:text-[15px]
+leading-none text-center">
+                            Complete Transparency
+                        </span>
+
                     </div>
+
                 </div>
 
             </div>

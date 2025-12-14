@@ -33,35 +33,37 @@ const standards = [
 
 const OurFarmStandards = () => {
     return (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10">
             {/* Title */}
-            <div className="mb-12 text-left">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-goodly leading-tight text-[#A9FF67]">
+            <div className="mb-12 flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-goodly font-medium leading-tight text-[#A9FF67]">
                     Our
                     <span className="block text-[#2D461D]">
                         <span className="text-[#A9FF67]">Farm</span> Standards
                     </span>
                 </h2>
+
+                <h2 className="mt-6 lg:mt-10 max-w-full lg:max-w-md text-base sm:text-lg font-manrope font-semibold leading-relaxed text-[#2D461D]">
+                    Our commitment to excellence in animal <br />
+                    welfare and transparent farm <br />
+                    management
+                </h2>
             </div>
 
             {/* Items */}
-            <div className="space-y-8 sm:space-y-12">
+            <div className="space-y-8 sm:space-y-10">
                 {standards.map((item, index) => (
-                    <div
-                        key={item.id}
-                        className={`${item.highlight ? 'md:-ml-24 lg:-ml-32' : ''}`} // Only negative margin on md+
-                    >
+                    <div key={item.id}>
                         <div
-                            className={`flex flex-col md:flex-row md:items-start gap-6 md:gap-16
-    ${item.highlight
-                                    ? 'bg-gradient-to-r from-[#2D461D] to-[#7BC259] text-white rounded-3xl p-6 sm:p-10 md:p-14 w-full md:w-auto md:ml-28'
-                                    : 'bg-white p-6 sm:pl-8 w-full'
+                            className={`flex flex-col md:flex-row md:items-start gap-4 md:gap-12
+                            ${item.highlight
+                                    ? 'bg-gradient-to-r from-[#2D461D] to-[#7BC259] text-white rounded-3xl p-6 sm:p-8 md:p-10 w-full md:w-auto md:ml-0'
+                                    : 'bg-white p-4 sm:p-6 md:p-8 w-full'
                                 }`}
                         >
-
                             {/* ID + Title */}
-                            <div className="flex items-center gap-4 sm:gap-6 min-w-[200px] md:min-w-[270px]">
-                                <span className="text-4xl sm:text-5xl md:text-6xl text-[#A9FF67] -ml-1">
+                            <div className="flex items-center gap-3 sm:gap-4 min-w-[180px] md:min-w-[250px]">
+                                <span className="text-3xl sm:text-4xl md:text-5xl text-[#A9FF67] -ml-1">
                                     {item.id}
                                 </span>
                                 <span className={`text-lg sm:text-xl md:text-xl ${item.highlight ? 'text-white' : 'text-[#2D461D]'}`}>
@@ -73,13 +75,11 @@ const OurFarmStandards = () => {
                             <div className="relative flex-1">
                                 {/* Vertical line */}
                                 <div
-                                    className={`absolute top-0 bottom-0 w-1 bg-[#A9FF67] rounded-full ${index === 0 ? 'left-0' : 'left-2 sm:left-5'
-                                        }`}
+                                    className={`absolute top-0 bottom-0 w-1 bg-[#A9FF67] rounded-full ${index === 0 ? 'left-0' : 'left-2 sm:left-4'} hidden md:block`}
                                 ></div>
 
                                 <p
-                                    className={`text-sm sm:text-base md:text-lg leading-relaxed ${item.highlight ? 'text-white pl-8 sm:pl-10 md:pl-10' : 'text-gray-700 pl-8 sm:pl-10 md:pl-16'
-                                        }`}
+                                    className={`text-sm sm:text-base md:text-lg leading-relaxed ${item.highlight ? 'text-white pl-0 md:pl-10' : 'text-gray-700 pl-0 md:pl-12'}`}
                                 >
                                     {item.description}
                                 </p>
@@ -87,8 +87,8 @@ const OurFarmStandards = () => {
                         </div>
 
                         {/* Divider */}
-                        {index !== standards.length - 4 && (
-                            <hr className="my-8 sm:my-12  border-[#2D461D]/20" />
+                        {index !== standards.length - 1 && (
+                            <hr className="my-6 sm:my-8 border-[#2D461D]/20" />
                         )}
                     </div>
                 ))}

@@ -7,25 +7,26 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full px-4 sm:px-6 md:px-1  md:py-9 py-3 flex items-center justify-between font-manrope bg-white relative">
+            <nav className="w-full px-4 sm:px-6 md:px-1  md:py-4  py-3 flex items-center justify-between font-manrope bg-white relative">
 
                 {/* Logo */}
                 <img
                     src={logo}
                     alt="logo"
-                    className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+                    className="w-14 h-14 ml-5 sm:w-20 sm:h-20 object-contain"
                 />
+
 
                 {/* Desktop Center Nav */}
                 <div
-                    className="hidden md:flex flex-nowrap  justify-center items-center gap-10 px-4 py-3 w-[34%] rounded-xl"
+                    className="hidden md:flex flex-nowrap ml-[13%]  justify-center items-center gap-10 px-4 py-2 w-[29%] rounded-xl"
                     style={{
                         background: "#2D461D",
                         boxShadow: "0px 0px 6.1px 1px rgba(169,255,103,0.3) inset",
                     }}
                 >
                     <button
-                        className="px-4 py-1 rounded-md text-sm font-medium"
+                        className="px-5 py-1  text-left rounded-md text-sm font-medium"
                         style={{ background: "#A9FF67", color: "#2D461D" }}
                     >
                         Home
@@ -34,7 +35,7 @@ const Navbar = () => {
                     {["Benefits", "Plans", "About", "Gallery"].map((item) => (
                         <button
                             key={item}
-                            className="text-[#A9FF67]  text-sm font-medium hover:opacity-80 transition"
+                            className="text-[#A9FF67]  text-sm font-font-manrope hover:opacity-80 transition"
                         >
                             {item}
                         </button>
@@ -42,7 +43,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Right Buttons */}
-                <div className="hidden md:flex  items-center gap-4">
+                <div className="hidden md:flex  items-center gap-3 mr-14">
                     <button
                         className="px-10 py-3 rounded-xl text-sm text-[#A9FF67] font-medium"
                         style={{

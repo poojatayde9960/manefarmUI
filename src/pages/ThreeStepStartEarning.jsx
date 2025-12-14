@@ -1,61 +1,50 @@
 import React from "react";
 
 const ThreeStepStartEarning = () => {
-    const steps = [
-        {
-            id: "01.",
-            title: "Choose a Plan",
-            description: "Pick 1, 5, or 10 buffalo units based on your investment capacity.",
-        },
-        {
-            id: "02.",
-            title: "Invest Securely",
-            description: "Funds are used to raise and maintain your buffalo herd with expert care.",
-        },
-        {
-            id: "03.",
-            title: "Get Payouts",
-            description: "Monthly payouts into your account with full transparency and reporting.",
-        },
-    ];
-
     return (
         <div className="w-full py-16 flex flex-col items-center bg-white px-4 sm:px-6 md:px-10">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-12">
-                <span className="text-[#A9FF67]">Three simple</span> steps to start <br /> earning from <span className="text-[#A9FF67]">buffalo</span> farming
+
+            {/* Heading */}
+            <h2 className="text-center text-2xl sm:text-3xl md:text-7xl text-gray-900 mb-20">
+                <span className="text-[#A9FF67]">Three simple</span> steps to start <br />
+                earning from <span className="text-[#A9FF67]">buffalo</span> farming
             </h2>
-            <div className="w-full max-w-7xl flex flex-col md:mt-9 md:flex-row items-start md:items-end">
 
-                {/* <div className="w-full max-w-5xl flex flex-col md:mt-9 md:flex-row items-start md:items-end"> */}
-                {steps.map((step, index) => (
-                    <div
-                        key={step.id}
-                        className={`
-    relative w-full md:w-1/3 p-8 rounded-t-xl border
+            <div className="w-full max-w-7xl flex flex-col md:flex-row items-start md:items-end">
 
-              ${index === 1
-                                ? "bg-gradient-to-b from-[#2D461D] to-[#4B8230] text-white -mt-12 z-10 border-[#A9FF67]/40 min-h-[330px]"
-                                : "bg-white text-black   border-[#A9FF67]/90 min-h-[250px]"
-                            }
+                {/* STEP 01 */}
+                <div className="relative w-full md:w-1/3 p-8 rounded-t-xl border border-[#A9FF67]/90
+                    bg-white text-black min-h-[250px] flex flex-col items-start">
+                    <span className="text-4xl mb-2 text-[#2D461D]">01.</span>
+                    <h3 className="text-xl mb-3 text-[#2D461D]">Choose a Plan</h3>
+                    <p className="text-base font-manrope text-[#378E00]">
+                        Pick 1, 5, or 10 buffalo units <br /> based on your investment <br /> capacity.
+                    </p>
+                </div>
 
-                flex flex-col items-start transition-all duration-300
-            `}
-                    >
-                        <span className={`text-2xl  mb-2 ${index === 1 ? "text-[#A9FF67]" : "text-[#2D461D]"}`}>
-                            {step.id}
-                        </span>
+                {/* STEP 02 – Highlighted */}
+                <div className="relative w-full md:w-1/3 p-8 rounded-t-xl border
+                    bg-gradient-to-b from-[#2D461D] to-[#4B8230]
+                    text-white -mt-12 z-10 border-[#A9FF67]/40 min-h-[330px]
+                    flex flex-col items-start">
+                    <span className="text-4xl mb-2 text-[#A9FF67]">02.</span>
+                    <h3 className="text-xl mb-3 text-[#A9FF67]">Invest Securely</h3>
+                    <p className="text-base font-manrope text-white/90">
+                        Funds are used to raise and <br /> maintain your buffalo herd <br /> with expert care.
+                    </p>
+                </div>
 
-                        <h3 className={`text-xl  mb-3 ${index === 1 ? "text-[#A9FF67]" : "text-[#2D461D]"}`}>
-                            {step.title}
-                        </h3>
+                {/* STEP 03 */}
+                <div className="relative w-full md:w-1/3 p-8 rounded-t-xl border border-[#A9FF67]/90
+                    bg-white text-black min-h-[250px] flex flex-col items-start">
+                    <span className="text-4xl mb-2 text-[#2D461D]">03.</span>
+                    <h3 className="text-xl mb-3 text-[#2D461D]">Get Payouts</h3>
+                    <p className="text-base font-manrope text-[#378E00]">
+                        Monthly payouts into your <br /> account with full <br /> transparency and reporting.
+                    </p>
+                </div>
 
-                        <p className={`text-base ${index === 1 ? "text-white/90" : "text-[#378E00]"}`}>
-                            {step.description}
-                        </p>
-                    </div>
-                ))}
             </div>
-
         </div>
     );
 };

@@ -1,118 +1,75 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-
+import graph from "/graph.png";
 const About = () => {
+    const graph = "/graph.png";
     return (
         <div className="w-full  md:-mt-0 -mt-44 py-10 md:py-20 px-4 md:px-16 font-outfit relative">
 
             {/* LEFT GRAPH + FLOATING CARDS (Desktop Only) */}
-            <div className="absolute left-0 top-6 w-[55%] h-[500px] hidden lg:block">
+            <div className="absolute left-0 top-6 w-[55%] mt-16 h-[500px] hidden lg:block">
 
                 {/* Grid Lines */}
-                <div className="absolute inset-0 opacity-20">
-                    <svg width="100%" height="100%">
-                        {[...Array(6)].map((_, i) => (
-                            <line
-                                key={i}
-                                x1={`${i * 20}%`}
-                                y1="0"
-                                x2={`${i * 20}%`}
-                                y2="100%"
-                                stroke="#C0C0C0"
-                                strokeWidth="1"
-                            />
-                        ))}
-                        {[...Array(6)].map((_, i) => (
-                            <line
-                                key={i}
-                                x1="0"
-                                y1={`${i * 20}%`}
-                                x2="100%"
-                                y2={`${i * 20}%`}
-                                stroke="#C0C0C0"
-                                strokeWidth="1"
-                            />
-                        ))}
-                    </svg>
-                </div>
+                {/* <Icon icon="bxs:right-arrow" className="text-[#2D461D] text-1xl" /> */}
+                <img
+                    src={graph}
+                    alt="Graph background"
+                    className="absolute inset-0 w-[80%] h-full object-cover rounded-4xl"
+                />
 
-                {/* Graph Line */}
-                <svg
-                    className="absolute -mt-16 inset-0"
-                    viewBox="0 0 600 400"
-                    fill="none"
-                    strokeWidth="2"
-                >
-                    <defs>
-                        <linearGradient id="graphGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stopColor="#A9FF67" />
-                            <stop offset="50%" stopColor="#6FAC47" />
-                            <stop offset="100%" stopColor="#000502" />
-                        </linearGradient>
-                    </defs>
 
-                    <path
-                        d="M10 250 
-            C60 180, 120 200, 180 260 
-            C220 300, 260 280, 300 230 
-            C340 180, 340 200, 420 250
-            C460 300, 500 280, 540 220
-            C580 170, 600 160, 600 170"
-                        stroke="url(#graphGradient)"
-                        strokeLinecap="round"
-                    />
-                </svg>
 
-                {/* Graph Dots */}
-                {[80, 200, 260, 380, 500].map((x, i) => {
-                    if (i === 2) return null;
 
-                    return (
-                        <div
-                            key={i}
-                            className="absolute w-12 h-12  rounded-full flex items-center justify-center transition-transform duration-300 hover:-translate-y-2"
-                            style={{
-                                top: `${i === 0 ? 201 : i === 1 ? 300 : i === 3 ? 260 : 140 + i * 20}px`,
-                                left: `${i === 1 ? x + 70 : i === 3 ? x + 310 : x}px`,
-                                background: "conic-gradient(from 180deg at 50% 50%, #A9FF67 0%, #65993E 100%)",
-                                boxShadow: "0 4px 20px rgba(101, 153, 62, 0.5)",
-                            }}
-                        >
-                            <div className="w-8 h-8 rounded-full bg-[#A9FF67]" />
-                        </div>
-                    );
-                })}
 
                 {/* Float Cards */}
-                <div className="absolute top-0 left-50 bg-[#2D461D] text-white rounded-4xl p-6 w-[335px] shadow-xl hover:-translate-y-3 transition">
-                    <p className="text-lg text-[#A9FF67] font-goodly">Full Transparency</p>
-                    <p className="text-sm mt-1 font-manrope opacity-80">
-                        Every investment, every buffalo, every payout fully documented.
-                    </p>
+                <div className="absolute -top-15 left-50 bg-[#2D461D] text-white rounded-4xl p-6 w-[335px] shadow-xl hover:-translate-y-3 transition flex">
+                    {/* Vertical line */}
+                    <div className="w-2 h-12  bg-[#A9FF67] rounded mr-4"></div>
+                    <div>
+                        <p className="text-lg text-[#A9FF67] font-goodly">Full Transparency</p>
+                        <p className="text-sm mt-1 font-manrope font-semibold text-[#FEFAE5] opacity-80">
+                            Every investment, every buffalo, every payout fully documented and visible <br /> to our investors.
+                        </p>
+                    </div>
                 </div>
 
                 <div
-                    className="absolute top-[330px] left-[480px] rounded-4xl p-6 w-[340px] shadow-xl text-white hover:-translate-y-3 transition"
+                    className="absolute top-[220px] left-[480px] rounded-4xl p-6 w-[340px] shadow-xl text-white hover:-translate-y-3 transition flex"
                     style={{
                         background: "linear-gradient(150.63deg, #2D461D 44.77%, #6FAC47 121.42%)",
                     }}
                 >
-                    <p className="text-lg font-semibold">Animal Welfare</p>
-                    <p className="text-sm mt-1 opacity-80">
-                        Expert veterinary care and humane treatment for every animal.
-                    </p>
+                    {/* Vertical line */}
+                    <div className=" w-2 h-12  bg-[#A9FF67] rounded mr-4"></div>
+                    <div>
+                        <p className="text-lg font-semibold">Animal Welfare</p>
+                        <p className="text-sm mt-1 font-manrope font-semibold text-[#FEFAE5] opacity-80">
+                            Expert veterinary care, quality nutrition, and humane treatment <br /> for every animal in our care.
+                        </p>
+                    </div>
                 </div>
 
+
                 <div className="absolute mt-[60%] left-60 rounded-4xl p-6 w-[270px] bg-[#2D461D] text-white shadow-xl hover:-translate-y-3 transition">
+                    <Icon icon="famicons:analytics" className="text-[#A9FF67] text-3xl mb-1" />
                     <p className="text-4xl font-goodly text-[#A9FF67]">12–25%</p>
                     <p className="text-xl opacity-80 font-goodly text-[#FEFAE5]">Income P.a</p>
 
-                    <svg viewBox="0 0 300 80" className="mt-3" fill="none" stroke="#4ADE80" strokeWidth="4">
+                    <svg viewBox="0 0 300 80" className="mt-3" fill="none">
+                        <defs>
+                            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                                <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#A9FF67" floodOpacity="0.7" />
+                            </filter>
+                        </defs>
                         <path
-                            d="M10 60 C60 40, 120 50, 180 30 C240 10, 260 20, 290 10"
+                            d="M10 60 C60 40, 120 50, 180 30 C240 10, 260 20, 290 8"
+                            stroke="#A9FF67"
+                            strokeWidth="4"
                             strokeLinecap="round"
+                            filter="url(#glow)"
                         />
                     </svg>
+
                 </div>
             </div>
 
@@ -129,19 +86,19 @@ const About = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className="flex items-center justify-center lg:justify-start gap-4 mt-10">
+                <div className="flex items-center justify-center lg:justify-start  mt-10">
                     <button
-                        className="px-10 py-4 text-[#A9FF67] rounded-full shadow-inner transition hover:shadow-none"
+                        className="px-10 py-4 text-[#A9FF67] font-manrope  rounded-full shadow-inner transition hover:shadow-none"
                         style={{
                             background: "#2D461D",
                             boxShadow: "0px 0px 4px 2px #A9FF67 inset",
                         }}
                     >
-                        Visit Our Farm
+                        Read More
                     </button>
 
                     <button className="w-12 h-12 border-2 border-[#2D461D] rounded-full flex items-center justify-center hover:border-[#4ADE80] transition">
-                        <Icon icon="bxs:right-arrow" className="text-[#2D461D] text-3xl" />
+                        <Icon icon="bxs:right-arrow" className="text-[#2D461D] text-1xl" />
                     </button>
                 </div>
             </div>
